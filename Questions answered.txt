@@ -1,0 +1,17 @@
+How many customers were created in the database?
+5 customers
+
+Where is the findAll method implemented?
+This method is implemented in Spring Repository, it returns all instances of a type.
+
+Suppose you have more than 1000 products in your database. How would you implement a method for supporting pagination and return pages of 50 products to your frontend?
+We can create a PageRequest object by passing in the requested page number and the page size:
+productRepository.findBy (PageRequest.of (0, 50)).
+
+How many products contain the "plus" word in their description?
+4 products
+How many products are returned by the findByDescriptionContaining query? Why?
+2, because there is a pagination of two product
+
+Which are the collection names where the objects are stored? Where are those names assigned?
+The names are consumer and product, the names are stored by default taking the class name
