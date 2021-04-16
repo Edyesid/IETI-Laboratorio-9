@@ -118,7 +118,7 @@ Create a Spring Boot Application that connects with MongoDB.
 
 1. Create a configuration class with the following code:
 
-![](img/laboratorio/querys/config.png)
+![](img/laboratorio/config.png)
 
 2. Replace the credential values and the server address.
 
