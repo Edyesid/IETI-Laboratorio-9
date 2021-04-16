@@ -2,8 +2,8 @@
 # 2.3 JPA with MongoDB
 Create a Spring Boot Application that connects with MongoDB.
 
-## Escuela Colombiana de ingeniería Julio Garavito
 ## IETI Laboratorio 9
+## Escuela Colombiana de ingeniería Julio Garavito
 
 ### Edwin Yesid Rodriguez Maldonado
 
