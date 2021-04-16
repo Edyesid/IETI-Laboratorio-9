@@ -73,7 +73,7 @@ Create a Spring Boot Application that connects with MongoDB.
 - How many products are returned by the *findByDescriptionContaining* query? Why?
 - Which are the collection names where the objects are stored? Where are those names assigned?
 
-[respuestas](Questions answered)
+[Respuestas](Questions%20answered.txt)
 
 5. Create two more models (User and Todo) with the following structure:
 
