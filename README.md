@@ -1,11 +1,11 @@
 
-## 2.3 JPA with MongoDB
+# 2.3 JPA with MongoDB
 Create a Spring Boot Application that connects with MongoDB.
 
 ## Escuela Colombiana de ingeniería Julio Garavito
 ## IETI Laboratorio 9
 
-## Edwin Yesid Rodriguez Maldonado
+### Edwin Yesid Rodriguez Maldonado
 
 ## Part 1: Basic Mongo DB configuration and Spring Boot Integration
 1. Create a MongoDB Atlas account on [https://www.mongodb.com/atlas-signup-from-mlab](https://www.mongodb.com/atlas-signup-from-mlab):
