@@ -1,4 +1,9 @@
-# 2.3 JPA with MongoDB
+#Escuela Colombiana de ingeniería Julio Garavito
+##IETI Laboratorio 9
+
+Edwin Yesid Rodriguez Maldonado
+
+## 2.3 JPA with MongoDB
 Create a Spring Boot Application that connects with MongoDB.
 
 ## Part 1: Basic Mongo DB configuration and Spring Boot Integration
@@ -56,6 +61,8 @@ Create a Spring Boot Application that connects with MongoDB.
           uri: <CONNECTION_STRING> 
     ```
 
+	![](img/laboratorio/yml.png)
+
 6. Run the project and verify that the connection to the database works properly. Answer the following questions:
 
 - How many customers were created in the database?
@@ -64,6 +71,8 @@ Create a Spring Boot Application that connects with MongoDB.
 - How many products contain the "plus" word in their description?
 - How many products are returned by the *findByDescriptionContaining* query? Why?
 - Which are the collection names where the objects are stored? Where are those names assigned?
+
+[respuestas](Questions answered)
 
 5. Create two more models (User and Todo) with the following structure:
 
@@ -79,6 +88,8 @@ Create a Spring Boot Application that connects with MongoDB.
      
     ````     
     
+	![](img/laboratorio/user.png)
+	
     Todo
     ````Javascript
         
@@ -91,6 +102,7 @@ Create a Spring Boot Application that connects with MongoDB.
         }
     ````                  
     
+	![](img/laboratorio/todo.png)	
     
 6. Create a repository for the _Users_ using the *CustomerRepository* as reference.
 
@@ -105,35 +117,7 @@ Create a Spring Boot Application that connects with MongoDB.
 
 1. Create a configuration class with the following code:
 
-    ````java
-
-    @Configuration
-    public class AppConfiguration {
-    
-        @Bean
-        public MongoDbFactory mongoDbFactory() throws Exception {
-    
-             MongoClientURI uri = new MongoClientURI(
-            "mongodb+srv://sancarbar:<password>@cluster0-dzkk5.mongodb.net/test?retryWrites=true&w=majority");
-
-            MongoClient mongoClient = new MongoClient(uri);
-
-            return new SimpleMongoDbFactory( mongoClient, "test");
-    
-        }
-    
-        @Bean
-        public MongoTemplate mongoTemplate() throws Exception {
-    
-            MongoTemplate mongoTemplate = new MongoTemplate(mongoDbFactory());
-    
-            return mongoTemplate;
-    
-        }
-    
-    }
-    
-    ````
+![](img/laboratorio/querys/config.png)
 
 2. Replace the credential values and the server address.
 
@@ -169,6 +153,8 @@ Create a Spring Boot Application that connects with MongoDB.
     * Todos where the dueDate has expired
     * Todos that are assigned to given user and have priority greater equal to 5
     * Users that have assigned more than 2 Todos.
-    * Todos that contains a description with a length greater than 30 characters        
+    * Todos that contains a description with a length greater than 30 characters 
+
+![](img/laboratorio/querys.png)	
 
 8. Implement the queries of the previous step using *derived query methods* in your repository interface. Is it possible to implement all of them?
